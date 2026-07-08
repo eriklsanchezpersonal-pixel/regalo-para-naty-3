@@ -24,6 +24,10 @@ titulo.innerHTML="";
 
 foto.style.display="block";
 
+setTimeout(()=>{
+    foto.style.opacity="1";
+},10);
+
 texto.innerHTML="";
 
 boton.style.display="none";
@@ -100,7 +104,7 @@ contar();
 
 function contar(){
 
-let numeros=[1,5,20,25,50,75,100,200,300,400,500,1000,10000,100000,1000000,999999999];
+let numeros=[1,5,20,25,50,75,100,200,300,400,500,600,700,800,900,1000,10000,100000,1000000,999999999];
 
 let i=0;
 
@@ -124,31 +128,29 @@ setTimeout(final,1000);
 
 function final(){
 
-contador.innerHTML="∞";
+    contador.innerHTML="∞";
 
-setTimeout(()=>{
+    setTimeout(()=>{
 
-titulo.innerHTML="❤️";
+        titulo.innerHTML='<span class="corazonFinal">❤️</span>';
 
-texto.innerHTML=
-
-`No existe un número
+        texto.innerHTML=`
+No existe un número
 
 con el que sea capaz de expresar
 
 todo lo que siento por ti.
 
-<3
+❤️
 
 Gracias por estos 3 meses contigo.
 
 Te amo.`;
+        
 
-texto.classList.add("latido");
+        lluvia();
 
-lluvia();
-
-},2000);
+    },2000);
 
 }
 
